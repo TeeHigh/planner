@@ -278,6 +278,9 @@ footer{
     color: rgb(228, 225, 225);
     
 }
+.footer-container a:hover{
+    text-decoration: underline;
+}
 .footer-left{
     display: flex;
     gap: clamp(3em, 4em, 6em);
