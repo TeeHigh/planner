@@ -58,7 +58,7 @@ header .logo h1{
 .nav-links ul li{
     list-style: none;
 }
-.nav-links ul li::after{
+/* .nav-links ul li::after{
     content: "";
     display: block;
     background: var(--main-colour);
@@ -70,7 +70,7 @@ header .logo h1{
 }
 .nav-links ul li:hover::after{
     width: 60%;
-}
+} */
 .nav-links ul li a{
     text-decoration: none;
     font-size: 1.3em;
@@ -80,20 +80,23 @@ header .logo h1{
 .nav-links ul li a:active{
     color: black;
 }
-.nav-links > span::before, .nav-links ul span::before{
-    font-size: 1.8em;
+.nav-links > span, .nav-links ul span{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
     display: none;
     color: var(--main-colour);
-    font-family: fontAwesome;
+    /* font-family: fontAwesome; */
     align-self: center;
     cursor: pointer;
 }
-.nav-links > span::before{
+
+/* .nav-links > span::before{
     content: "\f0c9";
 }
 .nav-links ul span::before{
     content: "\f00d";
-}
+} */
 
 /* .underline::after{
     content: "";
@@ -357,7 +360,16 @@ footer{
 }
 
 @media (max-width: 1071px){
-    header, main{
+    header{
+        margin-top: 0;
+        padding: 10px 2em;
+        background: #f9f9f9;
+        gap: .3em;
+        position: sticky;
+        top: 0;
+        box-shadow: 2px 2px 2px rgba(180, 180, 180, 0.3);
+    }
+    main{
         padding: 0 2em 0;
 
     }
@@ -381,8 +393,8 @@ footer{
         right: -300px;
         background: rgb(0,0,0);
         display: block;
-        height: 100vh;
-        padding: 2.5em 1.5em 0;
+        height: 100%;
+        padding: 1.5em;
         z-index: 1000;
         transition: 1s;
     }
@@ -405,19 +417,19 @@ footer{
         color: #fff;
         font-size: 1.4em;
     }
-    .nav-links > span::before, .nav-links ul span::before{
+    .nav-links > span, .nav-links ul span{
         display:  block;
         padding: 5px;
     }
-    .nav-links ul span::before{
-        color: #fff;
+    .nav-links ul span{
+        color: #ddd;
+        background: #dd2727;
     }
-    .nav-links > span:hover::before{
+    .nav-links > span:hover{
         background: #ddd;
     }
-    .nav-links ul span:hover::before{
-        background: var(--deep-colour);
-    }
+    /* .nav-links ul span:active{
+    } */
     .buttons{
         gap: 5px;
         margin-left: auto;
@@ -465,12 +477,16 @@ footer{
     }
 }
 @media (max-width: 700px) {
-    header, main{
+    main{
         padding: 0 1em 0;
 
     }
+    
     footer{
         padding: 3.5em 1em;
+    }
+    .btn{
+        display: none;
     }
     .card{
         max-width: fit-content;
@@ -498,5 +514,10 @@ footer{
     }
     .footer-socials a{
       font-size: 22px;
+    }
+}
+@media (max-width: 460px) {
+    .buttons{
+        display: none;
     }
 }
